@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="room-wrap">
+
+  <header class="room-header">
+    <div class="rh-inner">
+      <div class="ornament">
+        <span class="line a"></span>
+        <span class="dia"></span>
+        <span class="line b"></span>
+      </div>
+      {% if page.room_num %}<p class="room-num-label">Archive Room {{ page.room_num }} of V</p>{% endif %}
+      {% if page.kicker %}<p class="room-kicker">{{ page.kicker }}</p>{% endif %}
+      <h1 class="room-title-h1">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="room-subtitle">{{ page.subtitle }}</p>{% endif %}
+      {% if page.designation %}
+      <div class="room-designation-bar">
+        <span>{{ page.designation }}</span>
+      </div>
+      {% endif %}
+    </div>
+  </header>
+
+  {% include divider.html %}
+
+  <div class="room-content-wrap">
+    {{ content }}
+  </div>
+
+  {% include divider.html %}
+
+  <nav class="room-nav-footer">
+    <div class="rnf-inner">
+      <p class="rnf-label">Navigate the Archive</p>
+      <div class="rnf-links">
+        <a href="{{ '/audit/' | relative_url }}" class="rnf-link {% if page.url contains 'audit' %}active{% endif %}">I · Audit</a>
+        <a href="{{ '/lineage/' | relative_url }}" class="rnf-link {% if page.url contains 'lineage' %}active{% endif %}">II · Lineage</a>
+        <a href="{{ '/synthesis/' | relative_url }}" class="rnf-link {% if page.url contains 'synthesis' %}active{% endif %}">III · Synthesis</a>
+        <a href="{{ '/nodes/' | relative_url }}" class="rnf-link {% if page.url contains 'nodes' %}active{% endif %}">IV · Nodes</a>
+        <a href="{{ '/vault/' | relative_url }}" class="rnf-link {% if page.url contains 'vault' %}active{% endif %}">V · Vault</a>
+      </div>
+    </div>
+  </nav>
+
+</div>

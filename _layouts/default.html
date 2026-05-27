@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% if page.title %}{{ page.title }} — {% endif %}Al-Vid Scriptorium · Sacred Research Archive</title>
+
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_newlines | strip }}{% else %}{{ site.description | strip_newlines | strip }}{% endif %}">
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <meta property="og:site_name" content="Al-Vid Scriptorium · Sacred Research Archive">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} — Al-Vid Scriptorium{% else %}Sacred Research Archive · Al-Vid Scriptorium{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description | strip_newlines | strip }}{% else %}{{ site.description | strip_newlines | strip }}{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} — Al-Vid Scriptorium{% else %}Sacred Research Archive{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_newlines | strip }}{% else %}{{ site.description | strip_newlines | strip }}{% endif %}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "{{ site.url }}/#website",
+        "url": "{{ site.url }}",
+        "name": "Sacred Research Archive — Al-Vid Scriptorium",
+        "description": "{{ site.description | strip_newlines | strip }}",
+        "inLanguage": "en-US",
+        "publisher": { "@id": "{{ site.url }}/#archive" }
+      },
+      {
+        "@type": "ArchiveOrganization",
+        "@id": "{{ site.url }}/#archive",
+        "name": "Sacred Research Archive",
+        "alternateName": ["Al-Vid Scriptorium", "SRA"],
+        "url": "{{ site.url }}",
+        "description": "{{ site.description | strip_newlines | strip }}",
+        "foundingDate": "2026",
+        "knowsAbout": [
+          "Islamic Metaphysics", "Sassanid History", "Syriac Christianity",
+          "Persian Philosophy", "Sufi Transmission", "Gondishapur",
+          "Toledo Translation Movement", "Khorasan Studies", "Ahl al-Bayt"
+        ],
+        "founder": {
+          "@type": "Person",
+          "@id": "{{ site.url }}/#founder",
+          "name": "Saad Khizar Bosal",
+          "jobTitle": "Lead Architect",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mandi Bahauddin",
+            "addressRegion": "Punjab",
+            "addressCountry": "PK"
+          }
+        },
+        "sameAs": ["https://sacredcivilization.github.io"]
+      }
+    ]
+  }
+  </script>
+
+  {% if page.room %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "@id": "{{ page.url | absolute_url }}#doc",
+    "name": "{{ page.title }}",
+    "description": "{% if page.description %}{{ page.description | strip_newlines | strip }}{% endif %}",
+    "url": "{{ page.url | absolute_url }}",
+    "author": { "@id": "{{ site.url }}/#founder" },
+    "publisher": { "@id": "{{ site.url }}/#archive" },
+    "isAccessibleForFree": true,
+    "inLanguage": "en"
+  }
+  </script>
+  {% endif %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  {% include nav.html %}
+  {{ content }}
+  {% include footer.html %}
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

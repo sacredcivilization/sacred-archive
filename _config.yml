@@ -1,0 +1,28 @@
+title: Sacred Research Archive
+tagline: Al-Vid Scriptorium
+description: >
+  A decentralized, version-controlled repository of uncorrupted knowledge.
+  Reconstructing the Sassanid-Persian-Syriac civilizational lineage and the
+  Golden Chain — against the statist myths of colonial historiography.
+url: "https://sacred-archive.github.io"
+baseurl: ""
+
+author:
+  name: Saad Khizar Bosal
+  title: Lead Architect
+  location: Mandi Bahauddin, Punjab, Pakistan
+
+lang: en
+timezone: Asia/Karachi
+
+plugins: []
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
+  - vendor/
