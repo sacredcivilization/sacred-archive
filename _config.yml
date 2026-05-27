@@ -4,8 +4,8 @@ description: >
   A decentralized, version-controlled repository of uncorrupted knowledge.
   Reconstructing the Sassanid-Persian-Syriac civilizational lineage and the
   Golden Chain — against the statist myths of colonial historiography.
-url: "https://sacred-archive.github.io"
-baseurl: ""
+url: "https://sacredcivilization.github.io"
+baseurl: "/sacred-archive.github.io"
 
 author:
   name: Saad Khizar Bosal

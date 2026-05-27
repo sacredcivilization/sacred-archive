@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sacred-archive.github.io/sitemap.xml
+Sitemap: https://sacredcivilization.github.io/sacred-archive.github.io/sitemap.xml
