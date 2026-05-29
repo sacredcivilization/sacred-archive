@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sacredcivilization.github.io/sacred-archive/sitemap.xml
+Sitemap: https://library.alvidscriptorium.com/sacred-archive/sitemap.xml

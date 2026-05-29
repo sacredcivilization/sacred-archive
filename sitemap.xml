@@ -5,50 +5,50 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>https://sacredcivilization.github.io/sacred-archive/</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://library.alvidscriptorium.com/sacred-archive/</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://sacredcivilization.github.io/sacred-archive/audit/</loc>
+    <loc>https://library.alvidscriptorium.com/sacred-archive/audit/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://sacredcivilization.github.io/sacred-archive/lineage/</loc>
+    <loc>https://library.alvidscriptorium.com/sacred-archive/lineage/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://sacredcivilization.github.io/sacred-archive/synthesis/</loc>
+    <loc>https://library.alvidscriptorium.com/sacred-archive/synthesis/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://sacredcivilization.github.io/sacred-archive/nodes/</loc>
+    <loc>https://library.alvidscriptorium.com/sacred-archive/nodes/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://sacredcivilization.github.io/sacred-archive/vault/</loc>
+    <loc>https://library.alvidscriptorium.com/sacred-archive/vault/</loc>
     <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://sacredcivilization.github.io/sacred-archive/about/</loc>
-    <lastmod>2026-05-27</lastmod>
+    <loc>https://library.alvidscriptorium.com/sacred-archive/about/</loc>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
