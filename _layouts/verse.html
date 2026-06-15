@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<div class="verse-page-wrap">
+
+  <header class="verse-header">
+    {% include arch.html %}
+    <div class="verse-header-inner">
+      <div class="ornament">
+        <span class="line a"></span><span class="dia"></span><span class="line b"></span>
+      </div>
+      <p class="verse-eye">ʿIlm al-Kalām Archive · Quranic Verses · {{ page.verse_ref }}</p>
+      <div class="verse-arabic-hero">{{ page.arabic }}</div>
+      <h1 class="verse-title-h1">{{ page.title }}</h1>
+      <p class="verse-translation-hero">{{ page.translation }}</p>
+      <div class="verse-schools-bar">
+        <span class="vsb-item">Imami Tafseer</span>
+        <span class="vsb-sep">·</span>
+        <span class="vsb-item">Akbarian School</span>
+        <span class="vsb-sep">·</span>
+        <span class="vsb-item">Ḥaydar Āmulī Synthesis</span>
+      </div>
+    </div>
+  </header>
+
+  {% include divider.html %}
+
+  <div class="verse-content-wrap">
+    {{ content }}
+  </div>
+
+  {% include divider.html %}
+
+  <nav class="verse-nav-footer">
+    <div class="vnf-inner">
+      <p class="vnf-label">Quranic Verses</p>
+      <div class="vnf-links">
+        <a href="{{ '/verses/q2-30/' | relative_url }}" class="vnf-link">Q 2:30 — Adam as Khalīfa</a>
+        <a href="{{ '/verses/q22-46/' | relative_url }}" class="vnf-link">Q 22:46 — Hearts Blind</a>
+        <a href="{{ '/verses/q55-27/' | relative_url }}" class="vnf-link">Q 55:27 — Wajh Allāh</a>
+        <a href="{{ '/verses/' | relative_url }}" class="vnf-link" style="color:var(--gold);">↑ All Verses</a>
+        <a href="{{ '/propositions/' | relative_url }}" class="vnf-link" style="color:var(--ash);">Propositions →</a>
+      </div>
+    </div>
+  </nav>
+
+</div>

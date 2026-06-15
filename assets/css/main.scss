@@ -1,4 +1,4 @@
----
+﻿---
 ---
 
 /* ── VARIABLES ── */
@@ -1729,3 +1729,315 @@ nav.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.55); }
   .prop-header { flex-direction: column; align-items: flex-start; gap: 6px; }
 }
 
+
+
+/* ════════════════════════════════════════════
+   KALĀM ARCHIVE — QURANIC VERSES SECTION
+   Dual Tafseer · Shia + Ibn Arabi · Synthesis
+   ════════════════════════════════════════════ */
+
+/* ── VERSE PAGE WRAP ── */
+.verse-page-wrap { padding-top: 80px; min-height: 60vh; }
+
+/* ── VERSE HEADER ── */
+.verse-header {
+  text-align: center;
+  padding: 80px 48px 56px;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 0%, rgba(212,174,88,0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 50%, rgba(26,46,58,0.08) 0%, transparent 65%);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+}
+.verse-header-inner { max-width: 860px; margin: 0 auto; }
+.verse-eye {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.28em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+.verse-arabic-hero {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(22px, 3.5vw, 38px);
+  line-height: 2.2;
+  color: var(--gold);
+  direction: rtl;
+  text-align: center;
+  margin-bottom: 22px;
+  letter-spacing: 0.03em;
+}
+.verse-title-h1 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(18px, 2.8vw, 36px);
+  font-weight: 700;
+  color: var(--parchment);
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+.verse-translation-hero {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: clamp(14px, 1.8vw, 20px);
+  color: rgba(228,217,196,0.78);
+  max-width: 680px;
+  margin: 0 auto 28px;
+  line-height: 1.8;
+}
+.verse-schools-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  color: var(--ash);
+  text-transform: uppercase;
+  padding: 10px 0;
+  border-top: 1px solid rgba(201,168,76,0.08);
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+.vsb-item { color: var(--ash-light); }
+.vsb-sep { color: var(--gold-dim); opacity: 0.5; }
+
+/* ── VERSE CONTENT WRAP ── */
+.verse-content-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 48px 80px;
+}
+
+/* ── TAFSEER BLOCK ── */
+.tafseer-block {
+  margin-bottom: 48px;
+  border: 1px solid rgba(201,168,76,0.12);
+  background: rgba(20,18,16,0.55);
+}
+.tafseer-head {
+  padding: 20px 28px 16px;
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.tafseer-school-label {
+  font-family: 'Cinzel', serif;
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.tafseer-block.shia .tafseer-school-label { color: var(--gold); }
+.tafseer-block.akbarian .tafseer-school-label { color: #8BAFC0; }
+.tafseer-block.synthesis .tafseer-school-label { color: #B09060; }
+.tafseer-source-line {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  color: var(--ash);
+  font-style: italic;
+}
+.tafseer-body {
+  padding: 22px 28px 24px;
+}
+.tafseer-body p {
+  font-size: 16px;
+  color: var(--ash-light);
+  line-height: 1.92;
+  margin-bottom: 14px;
+}
+.tafseer-body p:last-child { margin-bottom: 0; }
+.tafseer-body strong { color: var(--parchment); font-weight: 600; }
+.tafseer-body em { color: var(--gold-light); font-style: italic; }
+
+/* Shia block left border */
+.tafseer-block.shia { border-left: 3px solid rgba(212,174,88,0.4); }
+/* Akbarian block left border */
+.tafseer-block.akbarian { border-left: 3px solid rgba(139,175,192,0.35); }
+/* Synthesis block */
+.tafseer-block.synthesis {
+  border-left: 3px solid rgba(176,144,96,0.45);
+  background: rgba(24,20,12,0.75);
+}
+
+/* ── IMAM HADITH INSERT ── */
+.imam-hadith {
+  margin: 18px 0;
+  padding: 16px 20px;
+  border: 1px solid rgba(212,174,88,0.15);
+  background: rgba(212,174,88,0.03);
+}
+.imam-hadith-arabic {
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  line-height: 2.0;
+  color: var(--gold-light);
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 8px;
+}
+.imam-hadith-source {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  color: var(--ash);
+  text-transform: uppercase;
+}
+
+/* ── CONVERGENCE POINT ── */
+.convergence-point {
+  margin: 12px 0 20px;
+  padding: 14px 18px;
+  border-left: 2px solid rgba(176,144,96,0.5);
+  background: rgba(176,144,96,0.04);
+}
+.convergence-label {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 0.22em;
+  color: #B09060;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.convergence-text {
+  font-size: 15px;
+  color: var(--parchment);
+  line-height: 1.82;
+  font-style: italic;
+}
+
+/* ── CROSS-REFERENCE BAR ── */
+.verse-xrefs {
+  margin-top: 44px;
+  padding: 22px 28px;
+  border: 1px solid rgba(201,168,76,0.1);
+  background: rgba(20,18,16,0.4);
+}
+.xrefs-label {
+  font-family: 'Cinzel', serif;
+  font-size: 8.5px;
+  letter-spacing: 0.22em;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.xrefs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.xref-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  color: var(--ash-light);
+  border: 1px solid rgba(201,168,76,0.15);
+  padding: 4px 10px;
+  text-decoration: none;
+  transition: color 0.2s, border-color 0.2s;
+}
+.xref-tag:hover { color: var(--gold); border-color: rgba(201,168,76,0.4); }
+
+/* ── VERSE INDEX PAGE ── */
+.verses-index-wrap { padding-top: 80px; }
+.verses-index-header {
+  text-align: center;
+  padding: 80px 48px 56px;
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+}
+.verses-grid {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 48px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+}
+.verse-card {
+  border: 1px solid rgba(201,168,76,0.12);
+  background: rgba(20,18,16,0.55);
+  padding: 28px;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.2s, background 0.2s;
+}
+.verse-card:hover {
+  border-color: rgba(201,168,76,0.3);
+  background: rgba(20,18,16,0.8);
+}
+.vc-ref {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.vc-arabic {
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
+  line-height: 1.9;
+  color: var(--gold-light);
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 12px;
+}
+.vc-title {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--parchment);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+.vc-desc {
+  font-size: 13.5px;
+  color: var(--ash);
+  line-height: 1.7;
+}
+
+/* ── VERSE NAV FOOTER ── */
+.verse-nav-footer {
+  background: rgba(10,8,6,0.7);
+  border-top: 1px solid rgba(201,168,76,0.1);
+  padding: 36px 48px;
+}
+.vnf-inner { max-width: 860px; margin: 0 auto; text-align: center; }
+.vnf-label {
+  font-family: 'Cinzel', serif;
+  font-size: 8px;
+  letter-spacing: 0.28em;
+  color: var(--ash);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.vnf-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.vnf-link {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--ash-light);
+  text-decoration: none;
+  border: 1px solid rgba(201,168,76,0.12);
+  padding: 6px 14px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.vnf-link:hover { color: var(--gold); border-color: rgba(201,168,76,0.35); }
+
+/* ── VERSE PAGE RESPONSIVE ── */
+@media (max-width: 700px) {
+  .verse-content-wrap { padding: 40px 20px 60px; }
+  .tafseer-head { flex-direction: column; gap: 4px; }
+  .tafseer-body { padding: 18px 18px 20px; }
+  .verses-grid { grid-template-columns: 1fr; padding: 36px 20px 60px; }
+  .verse-arabic-hero { font-size: 20px; }
+}
