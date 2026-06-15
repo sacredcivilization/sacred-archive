@@ -1,0 +1,196 @@
+---
+layout: default
+title: "Methodology — How the System Works"
+description: "The computational theology methodology: DeepSeek extraction engine + Claude logic engine. How 107+ Islamic theological propositions were extracted, structured, and validated."
+---
+
+<div class="topic-wrap">
+  <header class="topic-header">
+    {% include arch.html %}
+    <div class="topic-header-inner">
+      <div class="ornament"><span class="line a"></span><span class="dia"></span><span class="line b"></span></div>
+      <p class="topic-eye">Ilm al-Kalām Archive · System Documentation</p>
+      <h1 class="topic-title-h1">Methodology</h1>
+      <p class="topic-subtitle">DeepSeek extraction engine + Claude logic engine: how 107+ Islamic theological propositions were extracted from primary sources, structured as formal argument chains, and validated against the seven-layer SCRA architecture.</p>
+    </div>
+  </header>
+
+  {% include divider.html %}
+
+  <div class="topic-content-wrap" style="padding-top:52px;">
+
+    <p class="topic-intro">
+      Computational theology is not AI-generated speculation — it is AI-assisted extraction of arguments that already exist in primary Islamic sources. The human researcher defines the question; the DeepSeek engine finds the sources; Claude structures the logical form; the result is validated against the seven-layer argument chain. No proposition in this archive was invented by the AI. Every proposition was extracted from named primary sources with explicit citation.
+    </p>
+
+    <p class="topic-section-label">I. The Two-Engine System</p>
+
+    <div class="school-grid">
+      <div class="school-panel imami" style="border-top:2px solid rgba(201,168,76,0.4);">
+        <div class="school-name">DeepSeek Extraction Engine</div>
+        <div class="school-tradition" style="color:var(--gold-dim);">deepseek-chat · Knowledge Mode · Crawl Mode</div>
+        <p class="school-position">Extracts raw theological knowledge from primary Islamic sources. The engine has extensive training on classical Islamic texts — Al-Kāfī, Biḥār al-Anwār, Tafsīr al-Mīzān, Fuṣūṣ al-Ḥikam, Nihāyat al-Ḥikma, and hundreds of others. When given a structured extraction prompt, it returns JSON-formatted propositions with source citations, premise arrays, and conclusions.</p>
+        <div class="school-source">Two modes: Knowledge (internal training) · Crawl (live source verification) · Budget: ~$0.02 per 100 propositions</div>
+      </div>
+      <div class="school-panel ashari" style="border-top:2px solid rgba(60,130,200,0.4);">
+        <div class="school-name">Claude Logic Engine</div>
+        <div class="school-tradition" style="color:rgba(100,160,220,0.75);">Anthropic Claude · Argument Chain · Validation</div>
+        <p class="school-position">Structures extracted propositions into the seven-layer argument chain. Identifies logical dependencies between propositions. Validates internal consistency. Generates cross-school comparative analysis. Maps each proposition to its SCRA layer. Identifies gap propositions needed to complete logical sequences. Writes the final proposition content for the archive.</p>
+        <div class="school-source">107 propositions mapped to master-chain.json · 6 critical chain nodes · All 7 layers populated</div>
+      </div>
+    </div>
+
+    <p class="topic-section-label">II. The Extraction Process</p>
+
+    <div class="props-list">
+      <div class="prop-card">
+        <div class="prop-header">
+          <span class="prop-id">Step 1</span>
+          <span class="prop-tag">Topic Definition</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-premises">
+            <div class="premises-label">Process</div>
+            <ul class="premise-list">
+              <li>The researcher defines a theological topic area (e.g., "walāya", "tawassul", "Khawarij")</li>
+              <li>The SCRA seven-layer architecture is consulted to identify which layer(s) this topic belongs to</li>
+              <li>The primary sources most likely to contain relevant propositions are identified (Al-Kāfī, Biḥār al-Anwār, specific Tafsīr works, etc.)</li>
+            </ul>
+          </div>
+          <div class="prop-conclusion">
+            <span class="conclusion-label">Output</span>
+            <p class="conclusion-text">A structured extraction prompt sent to DeepSeek: "Extract all propositions from [source set] on [topic]. Format as JSON with fields: proposition_id, source, premises (array of axioms with text and source), conclusion, scra_layer, school, certainty_grade."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="prop-card">
+        <div class="prop-header">
+          <span class="prop-id">Step 2</span>
+          <span class="prop-tag">DeepSeek Extraction</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-premises">
+            <div class="premises-label">Process</div>
+            <ul class="premise-list">
+              <li>DeepSeek processes the extraction prompt against its training on Islamic primary sources</li>
+              <li>Returns structured JSON: each proposition has a unique ID, named source, array of premises (each with axiom text and its own source), a conclusion, and metadata (SCRA layer, school, certainty grade)</li>
+              <li>The system runs in Knowledge mode (fast, uses training data) or Crawl mode (slower, verifies against live sources)</li>
+            </ul>
+          </div>
+          <div class="prop-conclusion">
+            <span class="conclusion-label">Output</span>
+            <p class="conclusion-text">Raw JSON proposition objects — typically 6–14 propositions per topic extraction. The raw output includes the primary source citations that allow independent verification. DeepSeek's training on Arabic Islamic texts is extensive; citations can be cross-checked against standard hadith databases.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="prop-card">
+        <div class="prop-header">
+          <span class="prop-id">Step 3</span>
+          <span class="prop-tag">Claude Validation</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-premises">
+            <div class="premises-label">Process</div>
+            <ul class="premise-list">
+              <li>Claude receives the raw extracted propositions and the SCRA seven-layer architecture</li>
+              <li>Claude validates: Are the premises actually present in the cited source? Does the conclusion follow from the premises? Does the proposition fit its assigned SCRA layer? Are there cross-school comparisons to be added?</li>
+              <li>Claude identifies logical gaps: propositions that are needed to complete argument chains but were not extracted</li>
+            </ul>
+          </div>
+          <div class="prop-conclusion">
+            <span class="conclusion-label">Output</span>
+            <p class="conclusion-text">Validated propositions with corrections, additions, and cross-references. Gap propositions identified for follow-up extraction. The argument chain map (master-chain.json) updated with new proposition nodes and their layer assignments.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="prop-card">
+        <div class="prop-header">
+          <span class="prop-id">Step 4</span>
+          <span class="prop-tag">Chain Mapping</span>
+        </div>
+        <div class="prop-body">
+          <div class="prop-premises">
+            <div class="premises-label">Process</div>
+            <ul class="premise-list">
+              <li>Each validated proposition is mapped to its position in the master-chain.json: which SCRA layer, which critical chain node, what upstream propositions does it depend on, what downstream propositions does it enable</li>
+              <li>Cross-layer dependencies are identified: a Layer V walāya proposition may depend on Layer I ontological propositions and enable Layer VII institutional propositions</li>
+              <li>The complete chain is verified: does each layer have adequate proposition coverage? Are there weak links?</li>
+            </ul>
+          </div>
+          <div class="prop-conclusion">
+            <span class="conclusion-label">Output</span>
+            <p class="conclusion-text">A complete seven-layer argument chain with 107+ propositions, 6 critical chain nodes, and all cross-layer dependencies mapped. The master-chain.json file serves as the machine-readable version of the argument chain displayed on the Argument Chain page.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="topic-section-label">III. Proposition Structure</p>
+
+    <p style="font-size:15px;color:var(--ash-light);line-height:1.88;margin-bottom:24px;">Every proposition in the archive has the same structure — no exceptions. If a proposition cannot be structured in this form, it is not a proposition; it is an assertion.</p>
+
+    <div class="prop-card">
+      <div class="prop-header">
+        <span class="prop-id">EXAMPLE</span>
+        <span class="prop-tag school-imami">Imami</span>
+        <span class="prop-tag layer-v">Layer V</span>
+      </div>
+      <div class="prop-source-line">Source: [Primary Source Name] · [Author/Narrator] · [Additional Cross-References]</div>
+      <div class="prop-body">
+        <div class="prop-premises">
+          <div class="premises-label">Premises (2–4 per proposition)</div>
+          <ul class="premise-list">
+            <li>Premise 1: A factual or textual claim from the cited source — what the source actually says, with Quranic verse or hadith reference where applicable</li>
+            <li>Premise 2: A second claim that logically supports the conclusion — may be from the same source or a related source</li>
+            <li>Premise 3: Optional additional claim or qualification — cross-school comparison, boundary condition, or contextualizing fact</li>
+          </ul>
+        </div>
+        <div class="prop-conclusion">
+          <span class="conclusion-label">Conclusion</span>
+          <p class="conclusion-text">The conclusion that follows from the premises above — stated precisely, without adding claims not present in the premises. The conclusion may then serve as a premise in a downstream proposition. The argument chain is built by these logical dependencies.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="topic-section-label" style="margin-top:48px;">IV. Certainty Grades</p>
+
+    <div class="school-grid" style="grid-template-columns:1fr 1fr 1fr;margin-bottom:0;">
+      <div class="school-panel">
+        <div class="school-name" style="font-size:14px;">Grade A</div>
+        <div class="school-tradition" style="color:var(--gold-dim);">Mutawātir / Established Consensus</div>
+        <p class="school-position" style="font-size:13px;">Established by mutawātir (mass-transmitted) hadith or Quranic text with clear interpretation consensus. Cross-school agreement. No serious scholarly dispute.</p>
+      </div>
+      <div class="school-panel">
+        <div class="school-name" style="font-size:14px;">Grade B</div>
+        <div class="school-tradition" style="color:rgba(60,160,120,0.7);">Āḥād Ṣaḥīḥ / Strong Scholarly Support</div>
+        <p class="school-position" style="font-size:13px;">Strong hadith chains (ṣaḥīḥ or ḥasan). Majority scholarly position within the relevant school. Minor scholarly disputes exist but the majority position is clear.</p>
+      </div>
+      <div class="school-panel">
+        <div class="school-name" style="font-size:14px;">Grade C</div>
+        <div class="school-tradition" style="color:rgba(80,80,180,0.7);">Inferred / Analytical</div>
+        <p class="school-position" style="font-size:13px;">Derived by analysis from established sources. The proposition is the logical conclusion of the SCRA's argument chain applied to primary materials. Clearly labeled as analytical, not textually explicit.</p>
+      </div>
+    </div>
+
+    <p class="topic-section-label" style="margin-top:48px;">V. Budget and Scale</p>
+
+    <div class="key-finding">
+      <span class="kf-label">System Economics</span>
+      <p class="kf-text">The computational theology system is budget-efficient: the entire 107-proposition database was extracted for approximately $0.031 from a $2.00 DeepSeek API budget — 98.4% of the budget remains. At this rate, 10,000 propositions would cost approximately $3.00. The bottleneck is not API cost but validation quality: Claude's validation pass ensures the extracted propositions are logically coherent and accurately cited. The system scales: additional topic areas, cross-school comparisons, and deeper extraction of existing topics can be added at minimal cost. The Kalām Archive is designed to grow.</p>
+    </div>
+
+    <p class="topic-section-label">VI. What This System Does Not Do</p>
+
+    <ul class="premise-list" style="list-style:none;margin:0 0 40px;">
+      <li style="font-size:15.5px;color:var(--ash-light);line-height:1.9;padding:8px 0 8px 20px;border-bottom:1px solid rgba(201,168,76,0.05);position:relative;"><span style="position:absolute;left:0;color:var(--gold-dim);">✗</span> It does not generate new theological positions — all propositions are extracted from existing sources</li>
+      <li style="font-size:15.5px;color:var(--ash-light);line-height:1.9;padding:8px 0 8px 20px;border-bottom:1px solid rgba(201,168,76,0.05);position:relative;"><span style="position:absolute;left:0;color:var(--gold-dim);">✗</span> It does not issue fatwas — the archive is analytical, not juridical</li>
+      <li style="font-size:15.5px;color:var(--ash-light);line-height:1.9;padding:8px 0 8px 20px;border-bottom:1px solid rgba(201,168,76,0.05);position:relative;"><span style="position:absolute;left:0;color:var(--gold-dim);">✗</span> It does not replace study of primary sources — it indexes and structures what primary sources contain</li>
+      <li style="font-size:15.5px;color:var(--ash-light);line-height:1.9;padding:8px 0 8px 20px;position:relative;"><span style="position:absolute;left:0;color:var(--gold-dim);">✗</span> It does not claim all propositions are equally certain — the certainty grade system makes confidence levels explicit</li>
+    </ul>
+
+  </div>
+
+</div>

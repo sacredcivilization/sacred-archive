@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="topic-wrap">
+  <header class="topic-header">
+    {% include arch.html %}
+    <div class="topic-header-inner">
+      <div class="ornament">
+        <span class="line a"></span><span class="dia"></span><span class="line b"></span>
+      </div>
+      {% if page.topic_eye %}<p class="topic-eye">{{ page.topic_eye }}</p>{% endif %}
+      <h1 class="topic-title-h1">{{ page.title }}</h1>
+      {% if page.subtitle %}<p class="topic-subtitle">{{ page.subtitle }}</p>{% endif %}
+      {% if page.prop_count or page.layer %}
+      <div class="topic-stats-bar">
+        {% if page.prop_count %}<span class="tsb-item">{{ page.prop_count }} Propositions</span>{% endif %}
+        {% if page.layer %}<span class="tsb-sep">·</span><span class="tsb-item">{{ page.layer }}</span>{% endif %}
+        {% if page.primary_source %}<span class="tsb-sep">·</span><span class="tsb-item">{{ page.primary_source }}</span>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </header>
+
+  {% include divider.html %}
+
+  <div class="topic-content-wrap">
+    {{ content }}
+  </div>
+
+  {% include divider.html %}
+
+  <nav class="topic-nav-footer">
+    <div class="tnf-inner">
+      <p class="rnf-label">Browse Topics</p>
+      <div class="rnf-links">
+        <a href="{{ '/propositions/walaya/' | relative_url }}" class="rnf-link">Walāya</a>
+        <a href="{{ '/propositions/tawassul/' | relative_url }}" class="rnf-link">Tawassul</a>
+        <a href="{{ '/propositions/kalam-schools/' | relative_url }}" class="rnf-link">Kalām Schools</a>
+        <a href="{{ '/propositions/mahdi/' | relative_url }}" class="rnf-link">Mahdi</a>
+        <a href="{{ '/propositions/karbala/' | relative_url }}" class="rnf-link">Karbala</a>
+        <a href="{{ '/propositions/ghayba/' | relative_url }}" class="rnf-link">Ghayba</a>
+        <a href="{{ '/propositions/sadra/' | relative_url }}" class="rnf-link">Sadra</a>
+        <a href="{{ '/propositions/ibn-arabi/' | relative_url }}" class="rnf-link">Ibn ʿArabī</a>
+        <a href="{{ '/propositions/khawarij/' | relative_url }}" class="rnf-link">Khawarij</a>
+        <a href="{{ '/propositions/' | relative_url }}" class="rnf-link" style="color:var(--gold);">↑ All Topics</a>
+      </div>
+    </div>
+  </nav>
+
+</div>

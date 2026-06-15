@@ -1,15 +1,17 @@
-title: Sacred Research Archive
-tagline: Al-Vid Scriptorium
+title: "Ilm al-Kalām Archive"
+tagline: "Computational Theology · Islamic Argument Database"
 description: >
-  A decentralized, version-controlled repository of uncorrupted knowledge.
-  Reconstructing the Sassanid-Persian-Syriac civilizational lineage and the
-  Golden Chain — against the statist myths of colonial historiography.
-url: "https://sacred-archive.alvidscriptorium.com"
+  A structured database of Islamic theological arguments extracted from primary sources
+  using computational methods. Walāya, Tawassul, Kalām school comparison, Mahdi theology,
+  Karbala, Mulla Sadra, Ibn Arabi, Ghayba, Shariati, Iqbal, and more.
+  107+ validated propositions across 15 topic areas covering all 7 SCRA argument layers.
+url: "https://kalam.alvidscriptorium.com"
 baseurl: ""
 
 author:
   name: Saad Khizar Bosal
   title: Research Architect — Alvid Scriptorium
+  orcid: "0009-0004-9944-7378"
   location: Mandi Bahauddin, Punjab, Pakistan
 
 lang: en

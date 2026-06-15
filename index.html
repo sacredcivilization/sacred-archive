@@ -1,188 +1,300 @@
 ---
 layout: default
-title: "Al-Vid Scriptorium · Sacred Research Archive"
-description: "A decentralized, version-controlled repository of uncorrupted knowledge. Reconstructing the Sassanid-Persian-Syriac civilizational lineage and the Golden Chain of prophetic knowledge transmission."
+title: Ilm al-Kalām Archive
+description: "Computational theology database: 107+ validated Islamic theological propositions across 15 topic areas. DeepSeek extraction · Claude logic engine · Primary source citations."
 ---
 
-<!-- ═══ HERO ═══ -->
-<section class="hero">
-  {% include arch.html %}
-  <div class="hero-inner">
-    <p class="hero-kicker">Al-Vid Scriptorium &nbsp;·&nbsp; Sacred Research Archive &nbsp;·&nbsp; SRA-2026</p>
-    <h1 class="hero-h1">The Silsila Is the Chain of Custody</h1>
-    <p class="hero-thesis">
-      Every silsila is an isnād. Every isnād is a chain of custody. A library can be burned —
-      Baghdad fell in 1258, Toledo was extracted in the 12th century, Medina's graves were demolished
-      in 1806. But a living chain of persons, master to student across unbroken generations,
-      cannot be deleted. This archive documents that chain — its rupture events, its survival nodes,
-      and its living present at Dargah Ghazi Kot.
+<div class="topic-wrap">
+
+  <!-- HERO -->
+  <header class="topic-header" style="padding-top:120px;padding-bottom:80px;">
+    {% include arch.html %}
+    <div class="topic-header-inner">
+      <div class="ornament">
+        <span class="line a"></span><span class="dia"></span><span class="line b"></span>
+      </div>
+      <p class="topic-eye">Ilm al-Kalām · Computational Theology · Al-Vid Scriptorium</p>
+      <h1 class="topic-title-h1" style="font-size:clamp(32px,5.5vw,72px);">Islamic Argument<br>Database</h1>
+      <p class="topic-subtitle" style="max-width:780px;">107+ validated theological propositions extracted from primary Islamic sources — Imami, Muʿtazilī, Ashʿarī, Māturīdī. Every proposition: premises, sources, conclusion, certainty grade.</p>
+      <div class="topic-stats-bar" style="margin-top:28px;">
+        <span class="tsb-item">107+ Propositions</span>
+        <span class="tsb-sep">·</span>
+        <span class="tsb-item">15 Topic Areas</span>
+        <span class="tsb-sep">·</span>
+        <span class="tsb-item">7 Argument Layers</span>
+        <span class="tsb-sep">·</span>
+        <span class="tsb-item">DeepSeek + Claude System</span>
+      </div>
+      <div style="margin-top:40px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
+        <a href="{{ '/propositions/' | relative_url }}" style="display:inline-block;padding:12px 28px;border:1px solid rgba(201,168,76,0.35);font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:0.2em;color:var(--gold);text-decoration:none;text-transform:uppercase;">Browse Propositions</a>
+        <a href="{{ '/argument-chain/' | relative_url }}" style="display:inline-block;padding:12px 28px;border:1px solid rgba(201,168,76,0.14);font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:0.2em;color:var(--ash);text-decoration:none;text-transform:uppercase;">The Argument Chain</a>
+      </div>
+    </div>
+  </header>
+
+  {% include divider.html %}
+
+  <!-- WHAT THIS IS -->
+  <div class="topic-content-wrap" style="padding-top:56px;">
+
+    <p class="topic-intro">
+      The Kalām Archive is a structured database of Islamic theological arguments. Every proposition is extracted from primary sources — Al-Kāfī, Biḥār al-Anwār, Tafsīr al-Mīzān, Nihāyat al-Ḥikma, Fuṣūṣ al-Ḥikam, the works of Muṭahharī, Iqbal, Shariati — and formatted as a logical chain: premises → conclusion. The database covers 15 core theological areas, 4 jurisprudential schools, and 107+ validated propositions.
     </p>
-    <div class="hero-btns">
-      <a href="{{ '/audit/' | relative_url }}" class="btn-primary">Enter the Archive</a>
-      <a href="{{ '/about/' | relative_url }}" class="btn-ghost">About the Repository</a>
-    </div>
-    <div class="hero-coords">
-      <span>31.5543° N &nbsp;73.4873° E</span>
-      <span class="hm-sep">·</span>
-      <span>Mandi Bahauddin, Punjab</span>
-      <span class="hm-sep">·</span>
-      <span>Est. 2026</span>
-    </div>
-  </div>
-</section>
 
-{% include divider.html %}
+    <p class="topic-eye" style="text-align:left;margin-bottom:24px;">How The System Works</p>
 
-<!-- ═══ SALAM CODE DECLARATION ═══ -->
-<section class="salam-code">
-  <div class="salam-code-inner">
-
-    <div class="sc-col-left">
-      <p class="sc-code-label">Prophetic Logic</p>
-      <h2 class="sc-col-h2">The Salam Code</h2>
-      <p class="sc-code-def">Knowledge transmitted through non-state chains — <em>persons not institutions, bāṭin not ẓāhir.</em> Custody passes through the Ahl al-Bayt lineage and its Sufi silsila: a living chain that survived Umayyad suppression, Abbasid co-optation, Mongol destruction, and colonial erasure.</p>
-      <ul class="sc-code-attrs">
-        <li>Non-institutional custodians</li>
-        <li>Oral + written dual preservation</li>
-        <li>Bāṭin (inner) over ẓāhir (outer)</li>
-        <li>Person-to-person, not state-to-state</li>
-        <li>Verified through isnād (chain of transmission)</li>
-      </ul>
+    <div class="school-grid" style="grid-template-columns:1fr 1fr;margin-bottom:0;">
+      <div class="school-panel" style="border-top:2px solid rgba(201,168,76,0.4);">
+        <div class="school-name">DeepSeek Extraction Engine</div>
+        <div class="school-tradition" style="color:var(--gold-dim);">Knowledge Mode · Crawl Mode</div>
+        <p class="school-position">Extracts raw theological knowledge from primary sources. Runs in two modes: Knowledge (trained knowledge from classical texts) and Crawl (live source verification). Returns structured JSON: proposition_id, source, premises array, conclusion, school, certainty grade.</p>
+        <div class="school-source">Budget-efficient: ~$0.02 per 100 propositions · No hallucination guard needed when primary sources are explicitly cited</div>
+      </div>
+      <div class="school-panel" style="border-top:2px solid rgba(60,130,200,0.4);">
+        <div class="school-name">Claude Logic Engine</div>
+        <div class="school-tradition" style="color:rgba(100,160,220,0.75);">Argument Chain · Cross-School Analysis</div>
+        <p class="school-position">Structures extracted propositions into the 7-layer argument chain. Maps cross-school positions. Identifies logical dependencies between propositions. Validates internal consistency. Generates comparative analysis across Imami, Muʿtazilī, Ashʿarī, and Māturīdī positions.</p>
+        <div class="school-source">107 propositions mapped to master-chain.json · 6 critical chain nodes · All 7 SCRA argument layers populated</div>
+      </div>
     </div>
 
-    <div class="sc-divider-line"></div>
-
-    <div class="sc-col-right">
-      <p class="sc-code-label">Imperial Logic</p>
-      <h2 class="sc-col-h2">The Toledo Theft</h2>
-      <p class="sc-code-def">Institutional knowledge seizure — Bayt al-Ḥikma as Abbasid state apparatus, Toledo translation movement as European extraction, colonial universities as sanitization engines. Every imperial project begins with a library raid and ends with a footnote crediting itself.</p>
-      <ul class="sc-code-attrs">
-        <li>State-controlled repositories</li>
-        <li>Translation without attribution</li>
-        <li>Ẓāhir extracted, bāṭin discarded</li>
-        <li>Institution-to-institution transfer</li>
-        <li>Chain of custody severed by design</li>
-      </ul>
+    <div class="key-finding" style="margin-top:48px;">
+      <span class="kf-label">Why Computational Theology</span>
+      <p class="kf-text">Islamic theological arguments exist in dense classical texts — often untranslated, rarely indexed for the specific propositions they contain. People searching "what is the Islamic position on intercession" or "how does Imami theology differ from Ashʿarī on divine justice" cannot find structured, sourced answers. This archive changes that. Every claim here is a formal logical proposition with premises and a conclusion, not an editorial opinion. The methodology is documented. The sources are cited. The arguments stand on their own evidence.</p>
     </div>
+
+    <p class="topic-section-label">All Topic Areas</p>
 
   </div>
-</section>
 
-{% include divider.html %}
+  <!-- TOPIC INDEX GRID -->
+  <div class="topic-index-wrap">
+    <div class="topic-index-grid">
 
-<!-- ═══ CHAHAR BAGH · FIVE ROOMS ═══ -->
-<section class="rooms-wrap" id="rooms">
-  <div class="sh">
-    <p class="sh-eye">Archive Structure</p>
-    <h2 class="sh-title">The Five Rooms</h2>
-    <p class="sh-desc">Each room is a research node — a self-contained investigation with primary sources, analytical framework, and transmission evidence. Navigate non-linearly.</p>
+      <a href="{{ '/propositions/walaya/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer V · Shia Theology</div>
+        <div class="tic-name">Walāya Theology</div>
+        <div class="tic-arabic">الولاية · Wilāya · Guardianship</div>
+        <p class="tic-desc">Mahabbat + iṭāʿa + wilāya tripartite, fifth pillar status, tawḥīd expression, salvific condition, civilizational principle, nawāṣib distinction.</p>
+        <div class="tic-footer">
+          <span class="tic-count">8 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/tawassul/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer V · Intercession</div>
+        <div class="tic-name">Tawassul &amp; Shafāʿa</div>
+        <div class="tic-arabic">التوسل · Seeking Means · Intercession</div>
+        <p class="tic-desc">Tawassul as tawhidic, Quranic proof chain Q2:255/20:109/21:28, Prophet's permanent shafāʿa, Imam intercession tied to walāya, barzakh life refutes Wahhabi objection.</p>
+        <div class="tic-footer">
+          <span class="tic-count">7 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/kalam-schools/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Cross-School · Comparative</div>
+        <div class="tic-name">Ilm al-Kalām Schools</div>
+        <div class="tic-arabic">علم الكلام · Four Theological Traditions</div>
+        <p class="tic-desc">Imami, Muʿtazilī, Ashʿarī, Māturīdī on divine justice, free will, reason vs. revelation, imamate. Structural differences mapped across 14 comparison nodes.</p>
+        <div class="tic-footer">
+          <span class="tic-count">14 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/mahdi/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer VII · Present Application</div>
+        <div class="tic-name">Mahdi Theology</div>
+        <div class="tic-arabic">المهدي · The Guided One · Eschatology</div>
+        <p class="tic-desc">Theological necessity, ghayba purpose, major signs, Raj'a, walāya completion, black banners from Khorasan, intizār as active duty not passive waiting.</p>
+        <div class="tic-footer">
+          <span class="tic-count">8 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/karbala/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer IV · Historical Theology</div>
+        <div class="tic-name">Karbala Constitutional</div>
+        <div class="tic-arabic">كربلاء · Constitutional Refusal · Universal Paradigm</div>
+        <p class="tic-desc">Constitutional refusal, amr bil maʿrūf, Saqīfa→Karbala chain, shahāda as witness, Zaynab's role in preservation, Yazid as III-A Ba'alist prototype.</p>
+        <div class="tic-footer">
+          <span class="tic-count">9 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/ghayba/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer IV–VII · Occultation</div>
+        <div class="tic-name">Ghayba Theology</div>
+        <div class="tic-arabic">الغيبة · Occultation · The Two Absences</div>
+        <p class="tic-desc">Minor and Major Occultation, theological necessity, Wilayat al-Faqih as general deputyship, scope debate, wukalāʾ model, active resistance obligation during ghayba.</p>
+        <div class="tic-footer">
+          <span class="tic-count">9 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/sadra/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer VI · Metaphysical Proof</div>
+        <div class="tic-name">Mulla Ṣadrā</div>
+        <div class="tic-arabic">الحكمة المتعالية · Transcendent Wisdom</div>
+        <p class="tic-desc">Primacy of existence, graded intensity of being, substantial motion, presential knowledge, Four Journeys, Perfect Man = Imam, Wilayat al-Faqih grounded in journeys.</p>
+        <div class="tic-footer">
+          <span class="tic-count">8 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/ibn-arabi/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer VI · Sufi Metaphysics</div>
+        <div class="tic-name">Ibn ʿArabī</div>
+        <div class="tic-arabic">وحدة الوجود · Unity of Being · Akbarian School</div>
+        <p class="tic-desc">Waḥdat al-wujūd, Perfect Man, three tajallī levels, Seal of Saints = Twelfth Imam, barzakh as ontological bridge, walāya as structure of being itself.</p>
+        <div class="tic-footer">
+          <span class="tic-count">8 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/shariati/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer III · Civilizational Vocabulary</div>
+        <div class="tic-name">Shariati — Umma &amp; Imamate</div>
+        <div class="tic-arabic">الأمة · Umma · Tawḥīd Community</div>
+        <p class="tic-desc">Umma as tawḥīd community, Imam as rahbar, Black vs. Red Shi'ism, shahāda as civilizational force, haqq/bāṭil dialectic as the axis of history.</p>
+        <div class="tic-footer">
+          <span class="tic-count">6 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/iqbal/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer III · Philosophical Theology</div>
+        <div class="tic-name">Iqbal — Khudi &amp; Millat</div>
+        <div class="tic-arabic">خودی · The Self · Reconstruction</div>
+        <p class="tic-desc">Khudi as divine gift, faqr as highest station, Millat vs. qawm, ijtihad as intellectual walāya, Khorasan as renewal geography, ishq as ontological force.</p>
+        <div class="tic-footer">
+          <span class="tic-count">7 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/jihad/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer V · Jurisprudential</div>
+        <div class="tic-name">Jihad Requirements</div>
+        <div class="tic-arabic">الجهاد · Conditions · Fard Ayn vs. Kifāya</div>
+        <p class="tic-desc">Fard kifāya vs. fard ayn, offensive requires Imam's authorization, defensive is unconditional, status during ghayba, mujahid conditions, Greater Jihad primacy.</p>
+        <div class="tic-footer">
+          <span class="tic-count">6 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/ahl-al-kitab/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer V · Human Taxonomy</div>
+        <div class="tic-name">Ahl al-Kitāb Taxonomy</div>
+        <div class="tic-arabic">أهل الكتاب · F-12 Five-Category Human Taxonomy</div>
+        <p class="tic-desc">Q2:62 broad definition, honored subset Q3:199/5:82, structural Ahl al-Kitāb vs. Ṭāghūt, taqṣīr/quṣūr distinction, Ba'alist actors ≠ Torah-faithful Jews.</p>
+        <div class="tic-footer">
+          <span class="tic-count">9 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/khawarij/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer II–V · Intra-Muslim Threat</div>
+        <div class="tic-name">Khawarij</div>
+        <div class="tic-arabic">الخوارج · kilāb al-nār · Dogs of Hellfire</div>
+        <p class="tic-desc">Prophetic condemnation, zahir/bāṭin diagnostic, fighting more meritorious than polytheists, Nahrawan, Ibn Hazm wājib ruling, Imam Ṣādiq on most dangerous internal threat.</p>
+        <div class="tic-footer">
+          <span class="tic-count">10 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+      <a href="{{ '/propositions/khorasan/' | relative_url }}" class="topic-index-card">
+        <div class="tic-layer">Layer VII · Present Application</div>
+        <div class="tic-name">Khorasan Geography</div>
+        <div class="tic-arabic">خراسان · The Eastern Renewal Geography</div>
+        <p class="tic-desc">Black banners hadith, Khorasan as theological geography, Iqbal's Khorasan-Pakistan equation, Pothohar-Khorasan axis, two-zone walāya human geography, Khorasani Army thesis.</p>
+        <div class="tic-footer">
+          <span class="tic-count">10 Propositions</span>
+          <span class="tic-enter">Enter →</span>
+        </div>
+      </a>
+
+    </div>
   </div>
 
-  <!-- Chahar Bagh: fourfold garden grid with golden water channels -->
-  <div class="chahar-bagh">
+  {% include divider.html %}
 
-    <!-- Water channel intersection ornament (positioned at grid center) -->
-    <div class="cb-channel-cross" aria-hidden="true"></div>
-
-    <!-- Quadrant I — top left -->
-    <a href="{{ '/audit/' | relative_url }}" class="room-card room-card--i cb-q1">
-      <div class="rc-num">I</div>
-      <div class="rc-body">
-        <p class="rc-kicker">Audit</p>
-        <h3 class="rc-title">The Ba'alist Capture Sequence</h3>
-        <p class="rc-desc">The full evidentiary record: six rupture events from the Solomonic Forgery to the Wahhabi Seal. Primary sources. Transmission chain documentation. The living counter-evidence.</p>
-        <span class="rc-enter">Enter Room →</span>
+  <!-- 7-LAYER CHAIN TEASER -->
+  <div class="topic-content-wrap" style="padding-top:52px;padding-bottom:64px;">
+    <p class="topic-section-label">The Seven-Layer Argument Chain</p>
+    <p style="font-size:15.5px;color:var(--ash-light);line-height:1.88;margin-bottom:36px;max-width:780px;">All 107 propositions are mapped to a single seven-layer argument chain running from Quranic ontological foundations through metaphysical proof to present civilizational application.</p>
+    <div class="chain-wrap">
+      <div class="chain-layer-block">
+        <div class="chain-layer-num"><div class="cln-inner">I</div></div>
+        <div class="chain-layer-content">
+          <div class="clc-label">Layer I</div>
+          <div class="clc-title">Quranic Ontology</div>
+          <div class="clc-desc">Furqān, mīzān, haqq/bāṭil, ẓāhir/bāṭin — the four ontological concepts that structure all Islamic civilizational analysis.</div>
+        </div>
       </div>
-    </a>
-
-    <!-- Quadrant II — top right -->
-    <a href="{{ '/lineage/' | relative_url }}" class="room-card room-card--ii cb-q2">
-      <div class="rc-num">II</div>
-      <div class="rc-body">
-        <p class="rc-kicker">Lineage</p>
-        <h3 class="rc-title">The Golden Chain</h3>
-        <p class="rc-desc">Madīna → Baṣra → Kūfa transmission pipeline. Post-Karbalā survival networks. Non-state custodians from Salmān al-Fārsī to the Indus Basin.</p>
-        <span class="rc-enter">Enter Room →</span>
+      <div class="chain-layer-block">
+        <div class="chain-layer-num"><div class="cln-inner">II</div></div>
+        <div class="chain-layer-content">
+          <div class="clc-label">Layer II</div>
+          <div class="clc-title">Prophetic Mission as Divine Norm Enforcement</div>
+          <div class="clc-desc">Every prophet confronted a Ba'alist power structure. The pattern recurs: Fir'awn, Tower of Babel, Solomon, Carthage-Tophet. Divine norm enforcement is the operational logic of prophethood.</div>
+        </div>
       </div>
-    </a>
-
-    <!-- Quadrant III — bottom left -->
-    <a href="{{ '/synthesis/' | relative_url }}" class="room-card room-card--iii cb-q3">
-      <div class="rc-num">III</div>
-      <div class="rc-body">
-        <p class="rc-kicker">Synthesis</p>
-        <h3 class="rc-title">Avesta-Hind</h3>
-        <p class="rc-desc">Sassanid metaphysical soil as the pre-condition for Islamic philosophy. Pro-Alī Persia, Shu'ūbiyya, and the Zoroastrian-to-Sufi civilizational continuity.</p>
-        <span class="rc-enter">Enter Room →</span>
+      <div class="chain-layer-block">
+        <div class="chain-layer-num"><div class="cln-inner">III</div></div>
+        <div class="chain-layer-content">
+          <div class="clc-label">Layer III</div>
+          <div class="clc-title">Islamic Civilization = Sacred Civilization = True Umma = Millat</div>
+          <div class="clc-desc">Vocabulary equivalence: these are not synonyms by convention — they are structurally identical concepts in Shariati, Iqbal, and Quranic usage.</div>
+        </div>
       </div>
-    </a>
-
-    <!-- Quadrant IV — bottom right -->
-    <a href="{{ '/nodes/' | relative_url }}" class="room-card room-card--iv cb-q4">
-      <div class="rc-num">IV</div>
-      <div class="rc-body">
-        <p class="rc-kicker">Nodes</p>
-        <h3 class="rc-title">Post-Mongol Survival</h3>
-        <p class="rc-desc">Rey, Qum, and Iṣfahān as survival nodes after the Mongol destruction. How decentralized, person-based transmission outlasted every institutional collapse.</p>
-        <span class="rc-enter">Enter Room →</span>
+      <div class="chain-layer-block">
+        <div class="chain-layer-num"><div class="cln-inner">IV</div></div>
+        <div class="chain-layer-content">
+          <div class="clc-label">Layer IV</div>
+          <div class="clc-title">Saqīfa Diversion — The Hārūn Pattern</div>
+          <div class="clc-desc">Q 20:90–98 pre-encodes the Saqīfa event. Hārūn was the designated successor, ignored; Sāmirī offered the golden calf. Karbala is the constitutional consequence.</div>
+        </div>
       </div>
-    </a>
-
-    <!-- The Hauz · Room V · Inner Sanctum (full-width base) -->
-    <a href="{{ '/vault/' | relative_url }}" class="room-card room-card--v cb-hauz">
-      <div class="rc-num cb-hauz-num">V</div>
-      <div class="rc-body">
-        <p class="rc-kicker">The Vault &nbsp;·&nbsp; Inner Sanctum</p>
-        <h3 class="rc-title">Crypto-Shia Sufism</h3>
-        <p class="rc-desc">Sufism as the survival wrapper for Ahl al-Bayt metaphysics under Sunni hegemony. Silsila as isnād. The Indus Basin as the final custodial zone of uncorrupted knowledge.</p>
-        <span class="rc-enter">Enter the Vault →</span>
+      <div class="chain-layer-block">
+        <div class="chain-layer-num"><div class="cln-inner">V</div></div>
+        <div class="chain-layer-content">
+          <div class="clc-label">Layer V</div>
+          <div class="clc-title">Shia Theology as Recovery Mechanism</div>
+          <div class="clc-desc">Walāya, nass, bāṭin purity — Shia theology is the institutional recovery mechanism for the Saqīfa diversion. The Imams preserve the bāṭin the Caliphate abandoned.</div>
+        </div>
       </div>
-    </a>
+      <div class="chain-layer-block">
+        <div class="chain-layer-num"><div class="cln-inner">VI</div></div>
+        <div class="chain-layer-content">
+          <div class="clc-label">Layer VI</div>
+          <div class="clc-title">Metaphysical Proof</div>
+          <div class="clc-desc">Ṣadrā's primacy of existence + Ibn ʿArabī's waḥdat al-wujūd + Shariati's Tawḥīd cosmology: walāya is not political preference but ontological necessity.</div>
+        </div>
+      </div>
+      <div class="chain-layer-block">
+        <div class="chain-layer-num"><div class="cln-inner">VII</div></div>
+        <div class="chain-layer-content">
+          <div class="clc-label">Layer VII</div>
+          <div class="clc-title">Present Application</div>
+          <div class="clc-desc">The Khorasani Army thesis, Sanctuary IV living institutions, Phase III civilizational reassertion, Ghazab Lil Haq. The chain terminates in present geographic and institutional reality.</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px;">
+      <a href="{{ '/argument-chain/' | relative_url }}" style="display:inline-block;padding:12px 28px;border:1px solid rgba(201,168,76,0.22);font-family:'Cinzel',serif;font-size:10px;letter-spacing:0.24em;color:var(--ash);text-decoration:none;text-transform:uppercase;">Full Argument Chain with Proposition Mapping →</a>
+    </div>
+  </div>
 
-  </div><!-- /.chahar-bagh -->
-</section>
-
-{% include divider.html %}
-
-<!-- ═══ PULL QUOTE ═══ -->
-<div class="pq">
-  <blockquote>
-    "Knowledge is not owned — it is held in trust. Every chain of transmission is a chain of responsibility.
-    When the state seizes the library, the chain moves underground."
-  </blockquote>
-  <cite>Archival Principle &nbsp;·&nbsp; Al-Vid Scriptorium</cite>
 </div>
-
-{% include divider.html %}
-
-<!-- ═══ REPOSITORY METADATA ═══ -->
-<section class="sh" style="padding-bottom: 60px;">
-  <p class="sh-eye">Repository Metadata</p>
-  <h2 class="sh-title">About This Archive</h2>
-  <div class="repo-meta-grid">
-    <div class="rm-item">
-      <span class="rm-label">Format</span>
-      <span class="rm-val">Jekyll / GitHub Pages · Version-Controlled</span>
-    </div>
-    <div class="rm-item">
-      <span class="rm-label">Method</span>
-      <span class="rm-val">Non-institutional · Decentralized · Open Access</span>
-    </div>
-    <div class="rm-item">
-      <span class="rm-label">Sources</span>
-      <span class="rm-val">SCRA Vault I–IV · Primary Persian-Syriac Texts · Isnād Records</span>
-    </div>
-    <div class="rm-item">
-      <span class="rm-label">Director</span>
-      <span class="rm-val">Saad Khizar Bosal · Mandi Bahauddin, Punjab</span>
-    </div>
-    <div class="rm-item">
-      <span class="rm-label">Principle</span>
-      <span class="rm-val">Knowledge as Amānat (Trust) — not a commodity</span>
-    </div>
-    <div class="rm-item">
-      <span class="rm-label">SCRA Network</span>
-      <span class="rm-val"><a href="https://dargah-ghazikot.alvidscriptorium.com" target="_blank" rel="noopener">dargah-ghazikot.alvidscriptorium.com</a></span>
-    </div>
-  </div>
-</section>
