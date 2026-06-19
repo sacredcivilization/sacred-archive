@@ -1,11 +1,11 @@
-# Sacred Research Archive — sacred-archive.alvidscriptorium.com
-# Sacred Civilization Research Archive (SCRA) · NODE-04
+# Ilm al-Kalām Archive — kalam.alvidscriptorium.com
+# Computational Theology · Islamic Argument Database · Al-Vid Scriptorium
 
-# ── All crawlers ──────────────────────────────────────
+# ── All crawlers ────────────────────────────────────────────────────
 User-agent: *
 Allow: /
 
-# ── Google (Search + AI) ──────────────────────────────
+# ── Google (Search + AI) ────────────────────────────────────────────
 User-agent: Googlebot
 Allow: /
 
@@ -15,14 +15,14 @@ Allow: /
 User-agent: GoogleOther
 Allow: /
 
-# ── Bing / Microsoft Copilot ──────────────────────────
+# ── Bing / Microsoft Copilot ────────────────────────────────────────
 User-agent: Bingbot
 Allow: /
 
 User-agent: BingPreview
 Allow: /
 
-# ── OpenAI / ChatGPT ──────────────────────────────────
+# ── OpenAI / ChatGPT ────────────────────────────────────────────────
 User-agent: GPTBot
 Allow: /
 
@@ -32,34 +32,34 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-# ── Anthropic / Claude ────────────────────────────────
+# ── Anthropic / Claude ──────────────────────────────────────────────
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
-# ── Perplexity ────────────────────────────────────────
+# ── Perplexity ──────────────────────────────────────────────────────
 User-agent: PerplexityBot
 Allow: /
 
-# ── Apple ─────────────────────────────────────────────
+# ── Apple ───────────────────────────────────────────────────────────
 User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
-# ── Meta ──────────────────────────────────────────────
+# ── Meta ────────────────────────────────────────────────────────────
 User-agent: FacebookBot
 Allow: /
 
-# ── Common academic / archive crawlers ───────────────
+# ── Common academic / archive crawlers ──────────────────────────────
 User-agent: ia_archiver
 Allow: /
 
 User-agent: archive.org_bot
 Allow: /
 
-# ── Sitemap ───────────────────────────────────────────
-Sitemap: https://sacred-archive.alvidscriptorium.com/sitemap.xml
+# ── Sitemap ─────────────────────────────────────────────────────────
+Sitemap: https://kalam.alvidscriptorium.com/sitemap.xml

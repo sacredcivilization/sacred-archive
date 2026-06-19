@@ -1,10 +1,10 @@
 title: "Ilm al-Kalām Archive"
 tagline: "Computational Theology · Islamic Argument Database"
 description: >
-  A structured database of Islamic theological arguments extracted from primary sources
-  using computational methods. Walāya, Tawassul, Kalām school comparison, Mahdi theology,
-  Karbala, Mulla Sadra, Ibn Arabi, Ghayba, Shariati, Iqbal, and more.
-  107+ validated propositions across 15 topic areas covering all 7 SCRA argument layers.
+  389+ validated Islamic theological propositions across 63 topic areas — Imami, Muʿtazilī,
+  Ashʿarī, Māturīdī. Walāya, Tawassul, ʿIṣma, Ghayba, Mahdī, Karbala, Nafs, Lutf, Qadar,
+  Ibn ʿArabī, Mullā Ṣadrā, Shariati, Iqbal, Saqīfa, Ghadīr. Every proposition structured
+  as premises → sources → conclusion. DeepSeek extraction · Claude logic engine.
 url: "https://kalam.alvidscriptorium.com"
 baseurl: ""
 
@@ -28,3 +28,5 @@ exclude:
   - README.md
   - .gitignore
   - vendor/
+  - generate_urdu_pdf.py
+  - Kalam-Archive-Urdu.pdf
